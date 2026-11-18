@@ -58,8 +58,6 @@ body > * {
     line-height: 1;
     margin: 0 auto 24px;
     padding: 14px 16px 12px;
-    width: 90%;
-    box-sizing: border-box;
     text-align: center;
     text-transform: uppercase;
 }
@@ -70,10 +68,6 @@ body > * {
     font-weight: bold;
     margin: 30px auto 22px;
     text-align: center;
-}
-
-.descripcion:empty::after {
-    content: "Elige tu antojo y disfruta el sabor";
 }
 
 .menus {
@@ -95,59 +89,62 @@ body > * {
     min-height: 100px;
     width: 80%;
     margin: 0 auto;
-    padding: 40px 20px;
-    box-sizing: border-box;
+    padding: 32px 20px;
     text-align: center;
     text-decoration: none;
+    text-shadow: 2px 2px 3px var(--brown);
     transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-#menu-almuerzos {
-    background: linear-gradient(rgba(255, 118, 38, 0.600), rgba(255, 118, 38, 0.600)), url("../img/almuerzos.jpg");
-    background-size: cover;
-    background-repeat:  no-repeat;
-}
-
-#menu-comidas-rapidas {
-    background: linear-gradient(rgba(255, 201, 40, 0.600), rgba(255, 201, 40, 0.600)), url("../img/comida.jpg");
-    background-size: cover;
-    background-repeat:  no-repeat;
+#menu-pizzas {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/pizzacriolla.jpg");
 }
 
 #menu-hamburguesas {
-    background: linear-gradient(rgba(232, 65, 34, 0.600), rgba(232, 65, 34, 0.600)), url("../img/hamburguesa.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/hamburguesaespecial.jpg");
 }
 
 #menu-salchipapas {
-    background: linear-gradient(rgba(255, 118, 38, 0.600), rgba(255, 118, 38, 0.600)), url("../img/salchipapa.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/salchidelacasa.jpg");
 }
 
-#menu-pizzas {
-    background: linear-gradient(rgba(255, 201, 40, 0.600), rgba(255, 201, 40, 0.600)), url("../img/pizza.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+#menu-perros-calientes {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/perroespecial.jpg");
 }
 
-#menu-dorilocos {
-    background: linear-gradient(rgba(232, 65, 34, 0.600), rgba(232, 65, 34, 0.600)), url("../img/dorilocos.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+#menu-alitas {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/alitasbbq.jpg");
 }
 
-#menu-de-la-casa {
-    background: linear-gradient(rgba(255, 118, 38, 0.600), rgba(255, 118, 38, 0.600)), url("../img/menu_de_la_casa.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+#menu-pasticho {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/pasticho.jpg");
 }
 
-#menu-bebidas {
-    background: linear-gradient(rgba(255, 201, 40, 0.600), rgba(255, 201, 40, 0.600)), url("../img/bebida.jpg");
-    background-size: cover;
+#menu-jugos-naturales {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/jugomora.jpg");
+}
+
+#menu-sandwich {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/sandtrifasico.jpg");
+}
+
+#menu-platos-especiales {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/parrillada.jpg");
+}
+
+#menu-panzerroti {
+    background-image: linear-gradient(rgba(59, 23, 16, 0.45), rgba(59, 23, 16, 0.45)), url("../img/panzerroticriollo.jpg");
+}
+
+.tipo-menu {
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: brightness(0.7);  /* Oscurecer */
+    filter: saturate(0.6);    /* Reducir saturación */
+    filter: contrast(1.2);    /* Aumentar contraste */
+    filter: blur(0.6px);        /* Desenfocar */
 }
 
 .tipo-menu:hover,
@@ -160,6 +157,23 @@ body > * {
 .tipo-menu:active {
     box-shadow: none;
     transform: translate(4px, 4px);
+}
+
+.pie-pagina {
+    color: var(--brown);
+    font-size: 0.95rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 28px auto 0;
+    text-align: center;
+}
+
+.pie-pagina p {
+    margin: 4px 0;
+}
+
+.pie-pagina a {
+    color: inherit;
 }
 
 @media (min-width: 700px) {
@@ -176,8 +190,7 @@ body > * {
         padding: 22px 24px 18px;
     }
 
-    .titulo-secundario,
-    #menu-secundario {
+    .titulo-secundario {
         font-size: 3.8rem;
         padding: 18px 24px 16px;
     }
@@ -185,10 +198,6 @@ body > * {
     .descripcion {
         font-size: 1.15rem;
         margin-bottom: 28px;
-    }
-
-    .menus {
-        flex-direction: column;
     }
 
     .tipo-menu {
