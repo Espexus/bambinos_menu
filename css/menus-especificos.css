@@ -80,11 +80,11 @@ body:has(.menu-especifico) {
 .img-item-menu {
     aspect-ratio: 1 / 1;
     align-self: stretch;
-    flex: 0 0 34%;
+    flex: 0 0 45%;
     height: auto;
     margin: 0;
-    object-fit: cover;
-    width: 34%;
+    object-fit: contain;
+    width: 45%;
 }
 
 .textos {
@@ -129,8 +129,8 @@ body:has(.menu-especifico) {
     }
 
     .img-item-menu {
-        flex-basis: 32%;
-        width: 32%;
+        flex-basis: 40%;
+        width: 40%;
     }
 
     .textos {
